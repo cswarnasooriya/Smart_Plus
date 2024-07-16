@@ -1,3 +1,5 @@
+import { FaLaptop } from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
 
 const NavbarMenu = [
     {
@@ -42,15 +44,23 @@ const Navbar = () => {
         </div>
 
     {/* menu section     */}
-    <div>
-        <ul>
-            {NavbarMenu.map((item) => (
-                <li key={item.id}>
-                    <a href={item.link}> {item.title} </a>
-                </li>
-            ))}
-        </ul>
-    </div>
+        <div>
+            <ul>
+                {NavbarMenu.map((item) => (
+                    <li key={item.id}>
+                        <a href={item.link}> {item.title} </a>
+                    </li>
+                ))}
+                <div>
+                    <FaLaptop />
+                </div>
+            </ul>
+        </div>
+
+    {/* mobile section */}
+        <div>
+            <IoMenu />
+        </div>
       
     </nav>
   )
